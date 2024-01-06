@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Url Shortener</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                text-align: center;
+                padding: 0 20px;
+            }
+            h1 {
+                font-size: 2.6rem;
+                margin-bottom: 2rem;
+            }
+            div {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 800px;
+            }
+            div span {
+                display: block;
+                margin-bottom: 1rem;
+            }
+            div .result {
+                font-size: 1.2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Url Shortener 🤏</h1>
+        <div>
+            <span>{{.Link}}</span>
+            <span>will redirect to</span>
+            <span class="result"><strong>{{.Url}}</strong></span>
+        </div>
+    </body>
+</html>

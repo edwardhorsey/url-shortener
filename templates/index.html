@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Url Shortener</title>
+        <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+        <style>
+            body {
+                font-family: sans-serif;
+                text-align: center;
+                padding: 0 20px;
+            }
+            h1 {
+                font-size: 2.6rem;
+                margin-bottom: 2rem;
+            }
+            #link-result {
+                margin: 0 auto;
+                width: 100%;
+                max-width: 800px;
+            }
+            #link-result form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #link-result input {
+                width: 100%;
+                padding: 0.5rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                margin-right: 0.5rem;
+            }
+            #link-result button {
+                padding: 0.5rem 1rem;
+                border: 1px solid #ccc;
+                border-radius: 0.25rem;
+                background-color: #fff;
+                cursor: pointer;
+            }
+            #link-result button:hover {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Url Shortener 🤏</h1>
+        <div id="link-result">
+            <form hx-post="/create" hx-target="#link-result" hx-swap="innerHTML">
+                <input type="text" name="url" id="name" placeholder="Enter your link" />
+                <button type="submit">Shorten</button>
+            </form>
+        </div>
+    </body>
+</html>
